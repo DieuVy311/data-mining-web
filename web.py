@@ -26,7 +26,7 @@ from sklearn.metrics import (
     confusion_matrix, ConfusionMatrixDisplay
 )
 
-# 1. Thiết lập cấu hình trang (BẮT BUỘC là lệnh Streamlit đầu tiên)
+# 1. Thiết lập cấu hình trang 
 st.set_page_config(
     page_title="Data Mining & AI Web App",
     page_icon="📊",
@@ -38,7 +38,7 @@ st.title("Hệ thống Khai phá Dữ liệu & Huấn luyện Mô hình AI")
 # st.caption("Ứng dụng Web tương tác toàn diện xây dựng bằng Streamlit & Scikit-Learn")
 
 # ==========================================
-# HÀM TỐI ƯU HÓA BỘ NHỚ ĐỆM (CACHING)
+# HÀM TỐI ƯU HÓA BỘ NHỚ ĐỆM 
 # ==========================================
 @st.cache_data
 def load_default_data():
@@ -52,7 +52,7 @@ def load_csv(file):
     return pd.read_csv(file)
 
 # ==========================================
-# THANH BÊN (SIDEBAR - CONTROL PANEL)
+# SIDEBAR - CONTROL PANEL
 # ==========================================
 st.sidebar.header("⚙️ Bảng Điều Khiển")
 
@@ -162,7 +162,7 @@ with st.expander("Xem dữ liệu Đặc trưng (X) sau khi Tiền xử lý"):
 st.divider()
 
 # ==========================================
-# BƯỚC 3: HUẤN LUYỆN MÔ HÌNH (MODEL TRAINING)
+# BƯỚC 3: MODEL TRAINING
 # ==========================================
 st.header("Bước 3: Huấn luyện Mô hình Machine Learning")
 
@@ -233,7 +233,7 @@ if 'model' in st.session_state and st.session_state.feature_cols == feature_cols
             st.info("💡 Chọn thuật toán **Random Forest** để xem thêm biểu đồ mức độ quan trọng của từng đặc trưng (Feature Importance).")
 
     # ==========================================
-    # BƯỚC 5: DỰ ĐOÁN THỜI GIAN THỰC (REAL-TIME PREDICTION)
+    # BƯỚC 5: DỰ ĐOÁN THỜI GIAN THỰC
     # ==========================================
     st.divider()
     st.header("Bước 5: Dự đoán Real-time trên Dữ liệu Mới")
