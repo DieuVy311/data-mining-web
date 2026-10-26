@@ -233,7 +233,7 @@ if 'model' in st.session_state and st.session_state.feature_cols == feature_cols
             st.info("💡 Chọn thuật toán **Random Forest** để xem thêm biểu đồ mức độ quan trọng của từng đặc trưng (Feature Importance).")
 
     # ==========================================
-    # BƯỚC 5: DỰ ĐOÁN THỜI GIAN THỰC
+    # BƯỚC 5: DỰ ĐOÁN THỜI GIAN THỰC (REAL-TIME PREDICTION
     # ==========================================
     st.divider()
     st.header("Bước 5: Dự đoán Real-time trên Dữ liệu Mới")
